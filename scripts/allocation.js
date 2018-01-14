@@ -1,3 +1,4 @@
+require('dotenv').config()
 var fs = require('fs');
 var csv = require('fast-csv');
 var BigNumber = require('bignumber.js');
@@ -27,7 +28,7 @@ if (typeof PolyDistribution.currentProvider.sendAsync !== "function") {
 }
 
 var address = ''; // Account performing the allocation
-var key = ''; // BE CAREFUL!!! private key of the account performing the allocation
+var key = process.env.KEY
 var ABI = [
   {
     "constant": false,

@@ -1,5 +1,6 @@
+require('dotenv').config()
 var HDWalletProvider = require("truffle-hdwallet-provider");
-var mnemonic = "word1 word2 word..."; //BE CAREFUL!
+var mnemonic = process.env.MNEMONIC
 
 module.exports = {
   networks: {
